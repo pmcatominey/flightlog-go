@@ -1,0 +1,10 @@
+{
+    "From": "AMS",
+    "To": "SFO",
+    "Number": "KL605",
+    "Operator": "KLM",
+    "Aircraft": "Boeing 787-9 Dreamliner",
+    "Registration": "PH-BHD",
+    "ScheduledDeparture": "2020-03-17T14:45:00+08:00",
+    "ScheduledArrival": "2020-03-17T15:40:00-07:00"
+}
