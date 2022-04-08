@@ -22,10 +22,10 @@ func (l *FlightList) Render(width, height int) *ui.Grid {
 
 	t := widgets.NewTable()
 	t.Rows = [][]string{
-		{"DATE", "DEPARTURE", "NUMBER", "ROUTE", "OPERATOR", "DISTANCE (KM)", "DURATION"},
+		{"DEPARTURE", "NUMBER", "ROUTE", "AIRCRAFT", "OPERATOR", "DISTANCE (KM)", "DURATION"},
 	}
 	for _, f := range l.flightLog.Flights {
-		t.Rows = append(t.Rows, []string{f.ScheduledDeparture.Format("02 Jan"), f.ScheduledDeparture.Format("15:04"), f.Number, f.From + " --> " + f.To, f.Operator, fmt.Sprintf("%d", f.Stats.DistanceTraveled), f.Stats.Duration.String()})
+		t.Rows = append(t.Rows, []string{f.ScheduledDeparture.Format("02 Jan 2006 15:04"), f.Number, f.From + " --> " + f.To, f.Aircraft, f.Operator, fmt.Sprintf("%d", f.Stats.DistanceTraveled), f.Stats.Duration.String()})
 	}
 	t.RowStyles[0] = ui.Style{Fg: ui.ColorWhite, Modifier: ui.ModifierBold}
 	t.RowStyles[1] = ui.Style{Fg: ui.ColorWhite}
